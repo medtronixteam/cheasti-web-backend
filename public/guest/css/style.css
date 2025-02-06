@@ -1,0 +1,27 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+ /* font-awesome  */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+/* boxicons */
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+/* carousel.css */
+@import url('animate.css');
+@import url('owl.theme.green.css');
+@import url('owl.carousel.css');
+@import url('custom-owl-carouse.css');
+@import url('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
+@import url('bootstrap.min.css');
+/* slick-carousel */
+
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+@import url('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css');
+
+
+
+@import url('custom-slick-slider.css');
+@import url('global.css');
+@import url('registeration.css');

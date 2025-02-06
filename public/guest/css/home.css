@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.btn.focus,
+.btn:focus {
+outline: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+body {
+    background-color: white;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.chesti-head {
+    color: #FF6B00;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+
+}
+
+.chesti-head img {
+    height: 40px;
+    margin: 0px 10px;
+}
+
+.login-section {
+    background: url(../images/login-page-bg.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section::before {
+    position: absolute;
+    content: " ";
+    background-color: #00000080;
+    height: 100%;
+    width: 100%;
+}
+
+.login-section .card {
+    background: transparent !important;
+    color: white;
+    border: 2px solid #FF6B00;
+    border-radius: 28px;
+    height: 100%;
+}
+
+.login-section .card-btn {
+    margin-top: 20%;
+}
+
+.login-section .login-section-btn {
+    background-color: #FF6B00;
+    margin-top: 10px;
+    border: none;
+    display: block;
+    width: 50%;
+    margin-left: 25%;
+    font-weight: 600;
+    border-radius: 10px;
+
+}
+.login-section .btn-2 {
+    background-color: #FF6B0021;
+    border: 2px solid #FF6B00;
+}
+
+.login-section .btn-2:hover {
+    background-color: #FF6B00;
+    transition: all 0.2s ease-in;
+}
+
+@media (max-width:992px) {
+
+    .login-section .card {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width:786px) {
+
+    .chesti-head {
+        font-size: 25px;
+    }
+
+    .login-section .heading-login {
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width:576px) {
+    .login-section .card {
+        padding: 15px;
+    }
+
+    .login-section .col-12 {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .login-section .heading-login {
+        font-size: 20px;
+    }
+
+    .login-section .login-section-btn {
+        width: 100%;
+        margin-left: 0%;
+
+    }
+    .after-register .register-head {
+        font-size: 30px;
+    
+    }
+}
+
+
+
+/* =============== register  ======================*/
+.after-register .register-head {
+    font-family: "Open Sans", sans-serif;
+    font-size: 39px;
+    font-weight: 500;
+    line-height: 51px;
+    color: #343434;
+
+}
+
+.after-register .register-para {
+    font-size: 15px;
+    font-weight: 400;
+    color: #969494;
+}
+
+.after-register .card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.after-register .card .content i {
+    font-size: 30px;
+    color: #FF6B00;
+}
+
+.after-register-btn button {
+    background-color: #FF6B00;
+    border: none;
+    font-weight: 500;
+    padding: 12px 45px;
+    border-radius: 10px;
+}
+.after-register-btn button:hover {
+    background-color: #FF6B00;
+}
+
+.after-register-btn a {
+    color: #FF6B00;
+    font-weight: 600;
+}
+
+.after-register input:checked~label {
+    border: 2px solid #FF6B00;
+    border-radius: 10px;
+}
+
+/* =============== register end ======================*/

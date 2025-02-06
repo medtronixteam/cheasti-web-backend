@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  chesti_web_service:
+    container_name: chesti_web_Container
+    image: chesti_web_img
+    restart: always
+    build: ./
+    ports:
+      - "8023:8000"
+    volumes:
+      - ./:/var/www/
+    command: ["bash", "run.sh"]
+
+  db_web_chesti_service:
+    container_name: chesti_web_database_Container
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3310:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: As123456?
+      MYSQL_DATABASE: cheetsipanel
+    volumes:
+      - DB_vol:/var/lib/mysql
+
+volumes:
+  DB_vol:
+

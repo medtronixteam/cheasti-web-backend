@@ -1,0 +1,129 @@
+.register-form .container {
+    max-width: 1300px;
+}
+
+.register-form .chesteei {
+    font-size: 28px;
+    font-weight: 700;
+}
+.register-form .account{
+    color: #474747;
+}
+
+.register-form form {
+    padding: 0px 50px;
+}
+.register-form .py-fix{
+    padding: 50px 0px;
+}
+
+.register-form input {
+    border: 1px solid #C8C8C8;
+    padding-left: 43px;
+    border-radius: 10px;
+
+}
+.register-form input:hover{
+    border: 1px solid rgb(204, 68, 37) !important;
+
+}
+.register-form input:focus{
+    border: 2px solid rgb(204, 68, 37) !important;
+
+}
+
+.register-form .form-icon {
+    width: 16px;
+    position: absolute;
+    top: 15px;
+    left: 28px;
+}
+.register-form .view-icon {
+    width: 16px;
+    position: absolute;
+    top: 15px;
+    right: 28px;
+}
+.register-form .fix-w{
+    width: 23px !important;
+
+}
+
+.register-form input::placeholder {
+    font-size: 16px;
+}
+
+.register-form .form-group {
+    margin-bottom: 25px;
+}
+
+.register-form .check-box {
+    margin-left: 21px;
+    margin-bottom: 4px;
+}
+
+.register-form .check-box label {
+    color: #8B8B8B;
+}
+
+.register-form input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
+.register-form .register-img {
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.register-form .content-card .btn-secondary {
+    background-color: #41576F;
+    border-color: #41576F;
+}
+
+.register-form .content-card {
+    padding: 20px;
+    background-color: #00000080;
+    border: 1px solid #00000080;
+    border-radius: 10px;
+    z-index: 10;
+    max-width: 400px;
+    position: absolute;
+    bottom: 10px;
+    right: 45px;
+}
+
+.register-form .content-card p {
+    font-size: 18px;
+
+}
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {
+    .register-form form {
+        padding: 0px 25px;
+    }
+
+    .register-form .chesteei {
+        font-size: 25px;
+    }
+    .register-form .py-fix {
+        padding: 28px 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 576px) {
+    .register-form form {
+        padding: 0px 10px;
+    }
+
+    .register-form .check-box label {
+        font-size: 12px;
+    }
+
+}

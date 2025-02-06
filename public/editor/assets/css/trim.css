@@ -1,0 +1,48 @@
+#track {
+
+
+    background-color: #ffffff !important;
+    height: 50px;
+    width: 0;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .marker {
+    position: absolute;
+    bottom: -18px;
+    font-size: 10px;
+    color: #ffffff;
+  }
+  
+  
+  .arrow {
+    position: absolute;
+    top: -5px;
+    width: 0;
+    height: 0;
+    border-top: 38px solid #000;
+    border-bottom: 10px solid transparent;
+    cursor: pointer;
+  }
+  
+  #startArrow {
+    left: 0;
+    margin-left:-5px;
+    top: 1%;
+    border-right: 10px solid #000;
+  }
+  
+  #endArrow {
+    right: 0;
+    top: 1%;
+    border-left: 10px solid #000;
+  }
+  #line {
+    position: absolute;
+    top: 16px;
+    height: 8px;
+    background-color: #000;
+  }

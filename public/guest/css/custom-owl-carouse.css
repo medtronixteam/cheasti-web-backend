@@ -1,0 +1,52 @@
+
+.explore .item {
+  
+  }
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel .owl-nav button.owl-next {
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #4997D3;;
+    position: absolute;
+    top: 30%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  }
+  .owl-carousel .owl-nav button.owl-prev span,
+  .owl-carousel .owl-nav button.owl-next span {
+    font-size: 25px;
+    /* use margin to set icon center  */
+    /* margin-top: -12px; */
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    left: -25px;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    right: -25px;
+  }
+  
+
+  .browse .owl-carousel .owl-nav button.owl-prev,
+  .browse .owl-carousel .owl-nav button.owl-next {
+    
+    top: 50%;
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+  }
+  @media only screen and (max-width: 992px) {
+  }
+  @media only screen and (max-width: 768px) {
+  }
+  @media only screen and (max-width: 576px) {
+    .browse .owl-carousel .owl-nav button.owl-prev,
+    .browse .owl-carousel .owl-nav button.owl-next {
+      
+      top: 37%;
+    }
+  }
