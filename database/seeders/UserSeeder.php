@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         // Create a default user
         User::UpdateOrCreate(
             [
-            
+
                 'email' => 'admin@developer.com',
             ]
             ,[
