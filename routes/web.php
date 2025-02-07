@@ -145,3 +145,12 @@ Route::get('auth/google/callback', [AuthController::class, 'handleGoogleCallback
 Route::get('auth/login/google', [AuthController::class, 'redirectToGoogleLogin'])->name('auth.redirect.login');
 Route::get('auth/login/google/callback', [AuthController::class, 'handleGoogleCallbackLogin'])->name('auth.callback.login');
 
+use Illuminate\Support\Facades\Artisan;
+
+Route::get('/clear-cache', function () {
+    // Run the optimize:clear command
+    Artisan::call('optimize:clear');
+
+    // Return a response to indicate success
+    return 'Cache cleared successfully!';
+});
