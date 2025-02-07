@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->text('platform')->after('name')->nullable()->default('youtube');
+            $table->string('platform')->default('youtube')->after('name');
         });
     }
 

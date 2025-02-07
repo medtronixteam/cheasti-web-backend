@@ -24,4 +24,3 @@ EXPOSE 8000
 
 # Run the Laravel server
 CMD ["php", "artisan", "serve", "--host", "0.0.0.0"]
-
