@@ -35,7 +35,7 @@ Route::get('/profile', [LoginController::class, 'edit'])->name('profile.edit');
 Route::post('/profile', [LoginController::class, 'update'])->name('profile.update');
 Route::post('/profile/reset-password', [LoginController::class, 'resetPassword'])->name('profile.reset.password');
 
-Route::get('/a', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
 Route::middleware('guest')->group(function () {
@@ -147,7 +147,7 @@ Route::get('auth/login/google/callback', [AuthController::class, 'handleGoogleCa
 
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/', function () {
+Route::get('/clear-cache', function () {
     // Run the optimize:clear command
     Artisan::call('optimize:clear');
 
