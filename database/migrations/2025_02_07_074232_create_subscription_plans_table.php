@@ -1,19 +1,23 @@
 <?php
-// database/migrations/2024_06_14_000000_create_subscription_plans_table.php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
-class CreateSubscriptionPlansTable extends Migration
+return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('subscription_plans', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
             $table->string('name');
-            $table->decimal('price', 8, 2);
+            $table->string('package_id')->nullable();
+            $table->decimal('price');
             $table->text('description');
             $table->boolean('invoices')->default(false);
             $table->boolean('notes')->default(false);
@@ -27,32 +31,15 @@ class CreateSubscriptionPlansTable extends Migration
             $table->boolean('automation')->default(false);
             $table->timestamps();
         });
-
-        // Insert the three plans
-        DB::table('subscription_plans')->insert([
-            [
-                'id' => 1,
-                'name' => 'Basic',
-                'price' => 30.00,
-                'description' => 'Basic plan description',
-            ],
-            [
-                'id' => 2,
-                'name' => 'Pro',
-                'price' => 40.00,
-                'description' => 'Pro plan description',
-            ],
-            [
-                'id' => 3,
-                'name' => 'Enterprise',
-                'price' => 50.00,
-                'description' => 'Enterprise plan description',
-            ],
-        ]);
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
         Schema::dropIfExists('subscription_plans');
     }
-}
+};

@@ -8,26 +8,26 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('faqs', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('category_id');
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('category_id')->index('faqs_category_id_foreign');
             $table->text('question');
             $table->text('answer');
-
-
-            $table->foreign('category_id')->references('id')->on('faq_categories')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('faqs');
     }

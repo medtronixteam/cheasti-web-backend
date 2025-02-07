@@ -8,21 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-     public function up()
+    public function up()
     {
         Schema::table('notes', function (Blueprint $table) {
-            $table->string('folder')->after('note')->nullable();
+            $table->foreign(['user_id'])->references(['user_id'])->on('users')->onDelete('CASCADE');
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
     public function down()
     {
         Schema::table('notes', function (Blueprint $table) {
-            $table->dropColumn('folder');
+            $table->dropForeign('notes_user_id_foreign');
         });
     }
 };

@@ -31,14 +31,14 @@
 
 
         <li class="menu-header mt-2">
-            <span class="menu-header-text" data-i18n="MANAGE">MANAGE</span>
+            <span class="menu-header-text" data-i18na="MANAGE">MANAGE</span>
         </li>
 
         @if (auth()->user()->role == 'admin')
         <li class="menu-item {{ Route::currentRouteName() == 'user.dashboard' ? 'active' : '' }}">
             <a href="{{ route('admin.dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
-                <div data-i18n="Dashboard">Dashboard</div>
+                <div data-i18na="Dashboard">Dashboard</div>
             </a>
         </li>
         <li class="menu-item {{ request()->routeIs('admin.creators.active') ? 'active' : '' }}">
@@ -75,7 +75,7 @@
         <li class="menu-item {{ Route::currentRouteName() == 'admin.subscription.manage' ? 'active' : '' }}">
             <a href="{{ route('admin.subscription.manage') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
-                <div data-i18n="Subscription">Subscription</div>
+                <div data-i18na="Subscription">Subscription</div>
             </a>
         </li>
 
@@ -87,14 +87,14 @@
         <li class="menu-item {{ Route::currentRouteName() == 'user.dashboard' ? 'active' : '' }}">
             <a href="{{ route('user.dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
-                <div data-i18n="Dashboard">Dashboard</div>
+                <div data-i18na="Dashboard">Dashboard</div>
             </a>
         </li>
 
         <li class="menu-item {{ request()->routeIs('user.content.scheduler') || request()->routeIs('user.content.create') ? 'active' : '' }}">
             <a href="{{ route('user.content.scheduler') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-play-circle"></i>
-                <div data-i18n="Content">Content</div>
+                <div data-i18na="Content">Content</div>
             </a>
         </li>
 
@@ -103,28 +103,28 @@
         <li class="menu-item {{ Route::currentRouteName() == 'user.todo.list' ? 'active' : '' }}">
             <a href="{{ route('user.todo.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-checkbox-marked-circle-outline"></i>
-                <div data-i18n="To do">To do</div>
+                <div data-i18na="To do">To do</div>
             </a>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'user.notes' ? 'active' : '' }}">
             <a href="{{ route('user.notes.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-note-outline"></i>
-                <div data-i18n="Notes">Notes</div>
+                <div data-i18na="Notes">Notes</div>
             </a>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'user.invoice.list' ? 'active' : '' }}">
             <a href="{{ route('user.invoice.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-receipt"></i>
-                <div data-i18n="Invoices"></div>
+                <div data-i18na="Invoices">Invoices</div>
             </a>
         </li>
 
         {{-- <li class="menu-item {{ Route::currentRouteName() == 'user.invoices' ? 'active' : '' }}">
         <a href="{{ route('user.invoices') }}" class="menu-link">
             <i class="menu-icon tf-icons mdi mdi-receipt"></i>
-            <div data-i18n="Invoices">Invoices</div>
+            <div data-i18na="Invoices">Invoices</div>
         </a>
         </li> --}}
 
@@ -133,53 +133,53 @@
         <li class="menu-item {{ Route::currentRouteName() == 'user.platform.links' ? 'active' : '' }}">
             <a href="{{ route('user.platformlink.list') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-link"></i>
-                <div data-i18n="Platform links">Platform links</div>
+                <div data-i18na="Platform Links">Platform Links</div>
             </a>
         </li>
         <li class="menu-item {{ Route::currentRouteName() == 'user.short.generator' ? 'active' : '' }}">
             <a href="{{ route('user.short.generator') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-video-switch"></i>
-                <div data-i18n="Shorts Generator">Shorts Generator</div>
+                <div data-i18na="Shorts Generator">Shorts Generator</div>
             </a>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'user.video.editor' ? 'active' : '' }}">
             <a href="{{ route('user.video.editor') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-video-outline"></i>
-                <div data-i18n="Video Editor">Video Editor</div>
+                <div data-i18na="Video Editor">Video Editor</div>
             </a>
         </li>
 
 
         <li class="menu-header mt-4">
-            <span class="menu-header-text" data-i18n="Preference">Preference</span>
+            <span class="menu-header-text" data-i18na="Preference">Preference</span>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'profile.edit' ? 'active' : '' }}">
             <a href="{{ route('profile.edit') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-cog"></i>
-                <div data-i18n="Settings">Settings</div>
+                <div data-i18na="Settings">Settings</div>
             </a>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'user.subscription' ? 'active' : '' }}">
             <a href="{{ route('user.subscription') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-credit-card-outline"></i>
-                <div data-i18n="Subscription">Subscription</div>
+                <div data-i18na="Subscription">Subscription</div>
             </a>
         </li>
 
         <li class="menu-item {{ Route::currentRouteName() == 'user.support' ? 'active' : '' }}">
             <a href="{{ route('user.support') }}" class="menu-link">
                 <i class="menu-icon tf-icons mdi mdi-chat-question"></i>
-                <div data-i18n="Support">Support</div>
+                <div data-i18na="Support">Support</div>
             </a>
         </li>
 
         <li class="menu-item mt-5 mb-3 {{ Route::currentRouteName() == 'logout' ? 'active' : '' }}">
             <a href="{{ route('logout') }}" class="menu-link">
                 <i class="mdi mdi-logout me-2"></i>
-                <div data-i18n="logout">Log Out</div>
+                <div data-i18na="Logout">Log Out</div>
             </a>
         </li>
 
@@ -193,57 +193,57 @@
         {{-- <li class="menu-item">
       <a href="javascript:void(0);" class="menu-link menu-toggle">
         <i class="menu-icon tf-icons mdi mdi-form-select"></i>
-        <div data-i18n="Form Elements">Form Elements</div>
+        <div data-i18na="Form Elements">Form Elements</div>
       </a>
       <ul class="menu-sub">
         <li class="menu-item">
           <a href="forms-basic-inputs.html" class="menu-link">
-            <div data-i18n="Basic Inputs">Basic Inputs</div>
+            <div data-i18na="Basic Inputs">Basic Inputs</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-input-groups.html" class="menu-link">
-            <div data-i18n="Input groups">Input groups</div>
+            <div data-i18na="Input groups">Input groups</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-custom-options.html" class="menu-link">
-            <div data-i18n="Custom Options">Custom Options</div>
+            <div data-i18na="Custom Options">Custom Options</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-editors.html" class="menu-link">
-            <div data-i18n="Editors">Editors</div>
+            <div data-i18na="Editors">Editors</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-file-upload.html" class="menu-link">
-            <div data-i18n="File Upload">File Upload</div>
+            <div data-i18na="File Upload">File Upload</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-pickers.html" class="menu-link">
-            <div data-i18n="Pickers">Pickers</div>
+            <div data-i18na="Pickers">Pickers</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-selects.html" class="menu-link">
-            <div data-i18n="Select & Tags">Select &amp; Tags</div>
+            <div data-i18na="Select & Tags">Select &amp; Tags</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-sliders.html" class="menu-link">
-            <div data-i18n="Sliders">Sliders</div>
+            <div data-i18na="Sliders">Sliders</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-switches.html" class="menu-link">
-            <div data-i18n="Switches">Switches</div>
+            <div data-i18na="Switches">Switches</div>
           </a>
         </li>
         <li class="menu-item">
           <a href="forms-extras.html" class="menu-link">
-            <div data-i18n="Extras">Extras</div>
+            <div data-i18na="Extras">Extras</div>
           </a>
         </li>
       </ul>

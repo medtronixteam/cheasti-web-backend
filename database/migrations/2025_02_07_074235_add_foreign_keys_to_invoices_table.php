@@ -8,23 +8,25 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::table('invoices', function (Blueprint $table) {
-            $table->dropColumn(['amount', 'issue_date', 'due_date']);
+            $table->foreign(['user_id'])->references(['user_id'])->on('users')->onDelete('CASCADE');
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::table('invoices', function (Blueprint $table) {
-            $table->float('amount');
-            $table->date('issue_date');
-            $table->date('due_date');
+            $table->dropForeign('invoices_user_id_foreign');
         });
     }
 };

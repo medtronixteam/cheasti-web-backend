@@ -8,29 +8,32 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
-    { 
+    public function up()
+    {
         Schema::create('link_accounts', function (Blueprint $table) {
-            $table->id('link_account_id');
+            $table->bigIncrements('link_account_id');
             $table->string('user_id');
             $table->string('account_name', 100);
             $table->string('account_oauth2_token', 522);
-            $table->string('refresh_oauth2_token', 255)->nullable();
+            $table->string('refresh_oauth2_token')->nullable();
             $table->dateTime('token_expiration');
-            $table->string('link_email', 255);
-            $table->string('account_id', 255)->nullable();
+            $table->string('link_email');
+            $table->string('account_id')->nullable();
             $table->timestamps();
 
             $table->unique(['user_id', 'account_name'], 'user_account_index');
-            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('link_accounts');
     }

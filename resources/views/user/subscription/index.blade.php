@@ -69,8 +69,8 @@ Subscription
                     <li class="mb-1">Auto Scheduler</li>
                     <li class="mb-1">Editor Software</li>
                     <li class="mb-1">Admin Owner</li>
-                    <li class="mb-1">Multiple Platform Link</li>
-                    <li class="mb-1">Automation</li>
+                    <li class="mb-1">Multiple Platform Links</li>
+                    <br>
                     <br>
                     <br>
 
@@ -112,8 +112,8 @@ Subscription
                     <li class="mb-1">Planner Scheduler</li>
                     <li class="mb-1">Editor Software</li>
                     <li class="mb-1">Auto Content</li>
-                    <li class="mb-1">Multiple Platform Link</li>
-                    <li class="mb-1">Automation Cloud Data</li>
+                    <li class="mb-1">Multiple Platform Links</li>
+                    <li class="mb-1">Automated Cloud Data</li>
 
 
                 </ul>

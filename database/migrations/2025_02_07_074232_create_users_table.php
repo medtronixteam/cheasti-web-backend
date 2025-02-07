@@ -8,17 +8,16 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
-
+    public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            //$table->id();
             $table->string('user_id')->primary();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('email')->unique();
-
             $table->string('phone')->nullable();
             $table->string('password');
             $table->text('photo')->nullable();
@@ -31,15 +30,19 @@ return new class extends Migration
             $table->string('pm_last_four', 4)->nullable();
             $table->timestamp('trial_ends_at')->nullable();
             $table->string('status')->default('active');
-
             $table->timestamps();
+            $table->longText('jwt_key')->nullable();
+            $table->string('plan_active_date')->nullable();
+            $table->string('plan_expire_date')->nullable();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('users');
     }

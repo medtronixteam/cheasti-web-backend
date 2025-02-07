@@ -8,18 +8,17 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('notes', function (Blueprint $table) {
-            $table->id('note_id');
-            $table->string('user_id');
-            $table->foreign('user_id')
-            ->references('user_id')
-            ->on('users')
-            ->onDelete('cascade');
+            $table->bigIncrements('note_id');
+            $table->string('user_id')->index('notes_user_id_foreign');
             $table->string('note_name', 50)->nullable();
             $table->text('note');
+            $table->string('folder')->nullable();
             $table->timestamp('creation_date')->useCurrent();
             $table->timestamps();
         });
@@ -27,8 +26,10 @@ return new class extends Migration
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('notes');
     }

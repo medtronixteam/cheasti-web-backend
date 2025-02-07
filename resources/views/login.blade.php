@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- style CSS-->
     <link rel="icon" type="image/x-icon" href="{{url('assets/img/logo/cheetsi_fav.svg')}}" />
-    <link rel="stylesheet" href="{{ url('https://cheetsiweb.ihsancrm.com/guest/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url('guest/css/style.css') }}" />
     <title>Login</title>
 </head>
 

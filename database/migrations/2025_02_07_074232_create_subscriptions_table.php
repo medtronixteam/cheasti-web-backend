@@ -8,11 +8,13 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('subscriptions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('user_id');
             $table->string('type');
             $table->string('stripe_id')->unique();
@@ -22,18 +24,17 @@ return new class extends Migration
             $table->timestamp('trial_ends_at')->nullable();
             $table->timestamp('ends_at')->nullable();
             $table->timestamps();
-            $table->foreign('user_id')
-            ->references('user_id')
-            ->on('users')
-            ->onDelete('cascade');
+
             $table->index(['user_id', 'stripe_status']);
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('subscriptions');
     }

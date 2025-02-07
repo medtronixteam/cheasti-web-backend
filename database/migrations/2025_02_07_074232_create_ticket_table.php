@@ -8,29 +8,28 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     *
+     * @return void
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('ticket', function (Blueprint $table) {
             $table->increments('ticket_id');
-            $table->string('user_id');
-            $table->string('question', 255);
-            $table->string('reply', 255)->nullable();
+            $table->string('user_id')->index('ticket_user_id_foreign');
+            $table->string('question');
+            $table->string('reply')->nullable();
             $table->enum('status', ['Open', 'Closed'])->default('Open');
-            $table->timestamps(0); // Disables fractional seconds.
-            $table->foreign('user_id')
-            ->references('user_id')
-            ->on('users')
-            ->onDelete('cascade');
-
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
+     *
+     * @return void
      */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('tickets');
+        Schema::dropIfExists('ticket');
     }
 };
