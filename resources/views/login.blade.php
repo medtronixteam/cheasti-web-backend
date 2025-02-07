@@ -102,8 +102,8 @@
         </section>
     </main>
     <!-- Bootstrap JS -->
-    <script src="{{ url('https://cheetsiweb.ihsancrm.com/guest/js/jquery-3.5.1.js') }}"></script>
-    <script src="{{ url('https://cheetsiweb.ihsancrm.com/guest/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url('guest/js/jquery-3.5.1.js') }}"></script>
+    <script src="{{ url('guest/js/bootstrap.bundle.min.js') }}"></script>
     <script>
         document.getElementById('togglePassword').addEventListener('click', function (e) {
             const passwordField = document.getElementById('passwordField');
